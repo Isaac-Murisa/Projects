@@ -1,0 +1,238 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='google-signin-client_id', content='YOUR_CLIENT_ID.apps.googleusercontent.com')
+    title Create Skill
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='shortcut icon', href='/images/newlogo1.png')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js')
+    script(src='https://maxcdn.bootstrapcdn.Logo Design Studio Pro com/bootstrap/4.1.0/js/bootstrap.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  body
+    .formDiv(align='center')
+      form
+        input.formInput(type='text', placeholder="Prefered Name e.g. Isaac's Photography", name='bname', required='')
+        br
+        input.formInput(type='text', placeholder='Skill Name', name='skname', required='')
+        br
+        select.formInput(name='category', required='')
+          br
+          option(disabled='', selected='') Category
+          option(value='photgraphy') Photography
+          option(value='design') Creative and Design
+          option(value='org') Planning and Organization
+          option(value='culina') Culinary
+          option(value='other') Other
+        textarea.formInput(name='description', placeholder='Description', rows='10', required='')
+        br
+        textarea.formInput(name='qualification', placeholder='List/Describe any revelant qualifications or trainning obtained', rows='10')
+        br
+        section.region
+          br
+          br
+          p
+            b Fill the section below to provide area and region you would like to operate in
+          input#yes_country.radioButtons(type='radio', name='regionOperated', value='countries')
+          | Country(s)&nbsp&nbsp
+          input#yes_province.radioButtons(type='radio', name='regionOperated', value='provinces')
+          | Province(s)/State(s)&nbsp&nbsp
+          input#yes_city.radioButtons(type='radio', name='regionOperated', value='cities')
+          | Cities
+          br
+          br
+          select#select_country.formInput.sel_area(multiple='', name='cntnt')
+            option(selected='') Canada
+          select#select_province.formInput.sel_area(multiple='', name='prov')
+            option(selected='') Newfoundland
+          select#select_city.formInput.sel_area(multiple='', name='cty')
+            option(selected='') St.John's
+        br
+        p
+          b Please select your prefered contact method
+        input.radioButtons(type='radio', name='preContact', value='email')
+        | Email&nbsp&nbsp
+        input.radioButtons(type='radio', name='preContact', value='text')
+        | Text
+        br
+        section.pricing
+          br
+          br
+          p
+            b For pricing details, fill the section below
+          label(for='bp') Price: $
+          input#bp.formInput.price_input_space(type='text', placeholder='00.00', name='bprice')
+          label(for='selectPer') Per
+          select#selectPer.formInput.price_input_space
+            option(selected='', value='hr') Hour
+            option(value='jobD') Job Done
+            option(value='eve') Event
+            option(value='oth') Other
+          | &nbsp
+          input#other_per_price.formInput.price_input_space(type='text', placeholder='Specify', name='otherP')
+          section
+            br
+            br
+            p
+              b Are there any other expenses to be covered by the client?
+            input#yes_expenses.radioButtons(type='radio', name='cExpenses', value='yes')
+            | Yes&nbsp&nbsp                      
+            input#no_expenses.radioButtons(type='radio', name='cExpenses', value='no')
+            | No
+            br
+            br
+            p#other_exp_list
+              input#yes_transport.radioButtons(type='checkbox', name='trExpn')
+              | Transport
+              br
+              input#yes_lunch.radioButtons(type='checkbox', name='lunch')
+              | Lunch
+              br
+              input#yes_supplies.radioButtons(type='checkbox', name='supplies')
+              | Supplies 
+              br
+          br
+          br
+          p
+            b Are there any additional charges?
+          input.formInput(type='text', placeholder='Additional Charges', name='addcha')
+          br
+          section
+            br
+            br
+            p
+              b Prefered payment methods
+            input.radioButtons(type='checkbox', name='paymentM', value='cash')
+            | Cash   &nbsp&nbsp
+            input.radioButtons(type='checkbox', name='paymentM', value='interac')
+            | Interac &nbsp&nbsp  
+            input.radioButtons(type='checkbox', name='paymentM', value='paypal')
+            | Paypal   &nbsp&nbsp
+          br
+          br
+          p
+            b Additional Notes on pricing and charges
+          textarea.formInput(name='description', placeholder='Notes', rows='10', required='')
+          br
+        section.avail
+          br
+          p
+            b Provide the times you are available to provide your service
+          input#open_avail.radioButtons(type='radio', name='availabity', value='open')
+          | Open Availabity (will be unavailable during booked times)
+          br
+          input#provided_avail.radioButtons(type='radio', name='availabity', value='Provide')
+          | Provide Availability
+          section#provide_avail_table.provideSchedule
+            table.table
+              tbody
+                tr
+                  th(scope='row') Sunday
+                  td
+                    | From: 
+                    input.timeInput(type='text', placeholder='0000', name='sunfrom')
+                    |                                         To: 
+                    input.timeInput(type='text', placeholder='2359', name='sunto')
+                tr
+                  th(scope='row') Monday
+                  td
+                    | From: 
+                    input.timeInput(type='text', placeholder='0000', name='monfrom')
+                    |                                         To: 
+                    input.timeInput(type='text', placeholder='2359', name='monto')
+                tr
+                  th(scope='row') Tuesaday
+                  td
+                    | From: 
+                    input.timeInput(type='text', placeholder='0000', name='tuefrom')
+                    |                                         To: 
+                    input.timeInput(type='text', placeholder='2359', name='tueto')
+                tr
+                  th(scope='row') Wednesday
+                  td
+                    | From: 
+                    input.timeInput(type='text', placeholder='0000', name='wedfrom')
+                    |                                         To: 
+                    input.timeInput(type='text', placeholder='2359', name='wedto')
+                tr
+                  th(scope='row') Thursday
+                  td
+                    | From: 
+                    input.timeInput(type='text', placeholder='0000', name='thurfrom')
+                    |                                         To: 
+                    input.timeInput(type='text', placeholder='2359', name='thurto')
+                tr
+                  th(scope='row') Friday
+                  td
+                    | From: 
+                    input.timeInput(type='text', placeholder='0000', name='frifrom')
+                    |                                         To: 
+                    input.timeInput(type='text', placeholder='2359', name='frito')
+                tr
+                  th(scope='row') Saturday
+                  td
+                    | From: 
+                    input.timeInput(type='text', placeholder='0000', name='satfrom')
+                    |                                         To: 
+                    input.timeInput(type='text', placeholder='2359', name='satnto')
+        section.gallery_uploads
+          br
+          br
+          p
+            b Upload Pictures to make your Gallery
+          br
+          input(type='file', name='g_img', accept='images/*', multiple='')
+          br
+          br
+        input.formButton(type='submit', value='Submit', name='signupButton')
+    script.
+      $(Document).ready(function(){
+      /*For the area covered selection*/
+      $("#select_country").hide();
+      $("#select_province").hide();
+      $("#select_city").hide();
+      $("#yes_country").click(function(){
+      $("#select_country").show();
+      $("#select_province").hide();
+      $("#select_city").hide();
+      });
+      $("#yes_province").click(function(){
+      $("#select_country").show();
+      $("#select_province").show();
+      $("#select_city").hide();
+      });
+      $("#yes_city").click(function(){
+      $("#select_country").show();
+      $("#select_province").show();
+      $("#select_city").show();
+      });
+      /*For pricing and expenses*/
+      $("#other_per_price").hide();
+      $("#selectPer").change(function(){
+      $("select option:selected").each(function(){
+      if ($(this).val() == "oth") {
+      $("#other_per_price").show();
+      }
+      else {
+      $("#other_per_price").hide();
+      }
+      });
+      });
+      $("#other_exp_list").hide();
+      $("#yes_expenses").click(function(){
+      $("#other_exp_list").show();
+      });
+      $("#no_expenses").click(function(){
+      $("#other_exp_list").hide();
+      });
+      /*for availability*/
+      $("#provide_avail_table").hide();
+      $("#open_avail").click(function(){
+      $("#provide_avail_table").hide();
+      });
+      $("#provided_avail").click(function(){
+      $("#provide_avail_table").show();
+      });
+      });

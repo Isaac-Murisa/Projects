@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='google-signin-client_id', content='289017330144-n43d73drgd55r607fvappe33p6oardtf.apps.googleusercontent.com')
+    title Sign Up
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='shortcut icon', href='/images/newlogo1.png')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js')
+    script(src='https://maxcdn.bootstrapcdn.Logo Design Studio Pro com/bootstrap/4.1.0/js/bootstrap.min.js')
+    script(src='https://apis.google.com/js/platform.js', async='', defer='')
+    // Login with google
+  body
+    .LogoDiv(align='center')
+      br
+      br
+      br
+      br
+      img(src='images/newheader.png', alt='Logo', height='65.25', width='176.25')
+      br
+      br
+      |                 Sign Up
+      br
+      br
+    .formDiv(align='center')
+      form
+        input.formInput(type='text', placeholder='First Name', name='fname', required='')
+        br
+        input.formInput(type='text', placeholder='Last Name', name='lname', required='')
+        br
+        input.formInput(type='email', placeholder='Email', name='email', required='')
+        br
+        input.formInput(type='password', placeholder='Enter Password', name='pass', required='')
+        br
+        input.formInput(type='password', placeholder='Re-Enter Password', name='repass', required='')
+        br
+        input.formInput(type='tel', placeholder='Contact Number', name='cellnumber')
+        br
+        input.formInput(type='text', placeholder='City', name='city', required='')
+        br
+        hr(width='20%', style='color: grey', size='1')
+        input.formButton(type='submit', name='signup', value='Sign Up')
+        br
+        br
+        br
+        hr(width='50%', style='color: black', size='1')
+
+    //div for login with google
+    .g-signin2(data-onsuccess='onSignIn')
+
+  script.
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }

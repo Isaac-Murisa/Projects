@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='google-signin-client_id', content='YOUR_CLIENT_ID.apps.googleusercontent.com')
+    title Header
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='shortcut icon', href='/images/newlogo1.png')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js')
+  body
+    header.header
+      .nav
+        .nav-right
+          a(href='#Login') Login
+          a(href='#Signup') Sign Up
+        .nav-left
+          img(src='images/newheader1.png', alt='Logo')
+        .nav-center
+          form
+            input.formInput(type='text', placeholder='Search', name='search', required='')
+            input.formInput.hdr-input(type='text', placeholder='Location', name='location')
+            input.formButton.hdr-input(type='submit', value='Search', name='submitSearch')

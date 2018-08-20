@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='google-signin-client_id', content='289017330144-n43d73drgd55r607fvappe33p6oardtf.apps.googleusercontent.com')
+    title Login
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='shortcut icon', href='/images/newlogo1.png')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js')
+    script(src='https://apis.google.com/js/platform.js', async='', defer='')
+    // Login with google
+  body
+    .LogoDiv(align='center')
+      br
+      br
+      br
+      br
+      img(src='images/newheader.png', alt='Logo', height='65.25', width='176.25')
+      br
+      br
+      br
+      br
+    // Div container for the login credentials
+    .logIn.container-fluid(align='center')
+      form
+        // <label for="username">Username</label>
+        input.formInput(type='email', name='username', placeholder='Username')
+        br
+        // <label for="password">Password</label>
+        input.formInput(type='password', name='password', placeholder='Password')
+        br
+        input.formButton(type='submit', name='login', value='Login')
+      a.forgot(href='#######') Forgot Password?
+      br
+      br
+      br
+      hr(width='20%', style='color: black', size='1')
+      
+      //div for login with google
+      .g-signin2(data-onsuccess='onSignIn')
+
+    script.
+      function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      }
+
+

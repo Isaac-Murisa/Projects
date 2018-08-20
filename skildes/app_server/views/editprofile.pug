@@ -1,0 +1,79 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='google-signin-client_id', content='YOUR_CLIENT_ID.apps.googleusercontent.com')
+    title Edit Profile
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='shortcut icon', href='/images/newlogo1.png')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js')
+    script(src='https://maxcdn.bootstrapcdn.Logo Design Studio Pro com/bootstrap/4.1.0/js/bootstrap.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  body
+    .formDiv
+      p
+        b Edit Name
+      input.formInput(type='text', placeholder='First Name', name='fname', ng-value='')
+      br
+      input.formInput(type='text', placeholder='Last Name', name='lname', ng-value='')
+      br
+      label(for='birthm') Month of Birth
+      input#birthm.formInput(type='month', name='month', max='2003-12', required='')
+      br
+      br
+      p
+        b Edit Contact Details
+      input.formInput(type='email', placeholder='Email', name='email', ng-value='')
+      br
+      input.formInput(type='tel', placeholder='Contact Number', name='cellnumber')
+      br
+      br
+      p
+        b Do you wish to set a new password?
+        input#yes_change.radioButtons(type='radio', name='changepass', value='yes')
+        | yes
+        input#no_change.radioButtons(type='radio', name='changepass', value='no')
+        | No
+        section#pass_change
+          input.formInput(type='password', placeholder='Enter Password', name='pass')
+          br
+          input.formInput(type='password', placeholder='Re-Enter Password', name='repass')
+          br
+      hr(width='20%', style='color: grey', size='1')
+      p
+        b Do you wish to change or set your address
+        input#yes_change_addr.radioButtons(type='radio', name='changeaddr', value='yes')
+        | yes
+        input#no_change_addr.radioButtons(type='radio', name='changeaddr', value='no')
+        | No
+        section#addr_change
+          input.formInput(type='text', placeholder='Address Line', name='address', ng-value='')
+          br
+          input.formInput(type='type', placeholder='Suite number', name='suite', ng-value='')
+          br
+          input.formInput(type='text', placeholder='City', name='city', ng-value='')
+          br
+          input.formInput(type='text', placeholder='Country', name='country', ng-value='')
+          br
+          input.formInput(type='text', placeholder='Postal Code', name='postal', ng-value='')
+          br
+      input.formButton(type='button', value='Update', name='updateProfile')
+  script.
+    $(Document).ready(function(){
+    $("#pass_change").hide();
+    $("#yes_change").click(function(){
+    $("#pass_change").show();
+    });
+    $("#no_change").click(function(){
+    $("#pass_change").hide();
+    });
+    $("#addr_change").hide();
+    $("#yes_change_addr").click(function(){
+    $("#addr_change").show();
+    });
+    $("#no_change_addr").click(function(){
+    $("#addr_change").hide();
+    });
+    });

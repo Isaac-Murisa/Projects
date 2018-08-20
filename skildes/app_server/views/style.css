@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Raleway', sans-serif !important;
+}
+
+/* Styling for the header bar */
+.header {
+    background-color: white;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+    padding: 12px 20px;
+}
+/* Corner for Login/Signup/Profile buttons */
+.nav-right {
+    float: right;
+    margin: 20px ;
+}
+/* The logo */
+.nav-left {
+    float: left;
+}
+/* The search bar */
+.nav-center {
+    text-align: center;
+}
+.nav-right a {
+    border: 2px solid #320037;
+    border-radius: 2px;
+    margin: 8px 0;
+    padding: 15px 15px;
+}
+.nav-right a:visited {
+    color: black;
+}
+.nav-right a:hover {
+    color: white;
+    background-color: #320037;
+}
+.hdr-input {        /* change width for the buttons on the search bar */
+    width: 7% !important;
+}
+
+.logIn {
+    text-align: center;
+}
+/* All the input fields related to a form */
+.formInput {
+    width: 550px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #320037;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+}
+/* All the buttons related to a form */
+.formButton {
+    width: 550px;
+    background-color: #320037;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+}
+.radioButtons {
+    outline: none;
+}
+a:link {            /* Links on the login page */
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: #320037;
+    text-decoration: none;
+}
+a:active, a:visited {
+    text-decoration: none;
+    color: none;
+}
+.forgot {
+    font-size: 1em;
+}
+
+/* div tag with shadow */
+.formDiv {
+    width: 600px;
+    margin: auto;
+    box-shadow: 0 2px 4px 0 lightgray;
+    padding: 10px 0 10px 25px;
+    overflow: hidden;
+    text-align: left;
+}
+.signupForm {       /* length for the input fields inside signup form */
+    width: 90%;
+}
+.radioButtons {
+    outline: none;
+}
+.timeInput {
+    border: none;
+    outline: none;
+}
+.sel_area {
+    width: 180px;
+}
+.price_input_space {
+    width: 150px;
+    padding: 5px 10px;
+}
+
+/* Side div tag containing the profile of the person */
+.sideProfile {
+    width: 300px;
+    float: left;
+    padding: 20px 10px 10px 50px;
+}
+/* Main profile, the middle div tag */
+.mainProfile {
+    width: 80%;
+    padding: 10px 10px 10px 10px;
+    float: right;
+}
+/* Round pic for the profile pic */
+.roundPic {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #320037;
+}
+.spbutton {     /* side profile buttons */
+    width: 80%;
+}
+.submitRequest {
+    width: 500px;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid lightgray;
+    text-align: left;
+}
+
+/* Navigation buttons to categories on main page. */
+.catab {
+    width: 250px;
+    height: 100px;
+    background-color: white;
+    color:black;
+    /*padding: 20px 20px;*/
+    margin: 20px 20px;
+    border: 2px solid #320037;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    text-align: center;
+    /*white-space: normal;*/
+    font-size: 18px;
+    word-wrap: initial;
+    box-sizing: border-box;
+    outline: none;
+}
+.catab:hover {
+    background-color: #320037;
+    color: white;
+}
+/* Div for the profile listings */
+.listings {
+    margin: auto;
+    text-align: center;
+}
+/* each skill picture slide with text */
+.banner {
+    width: 700px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 lightgray;
+    display: inline-block;
+    margin: 40px 20px;
+    position: relative;
+}
+.oneb {
+    background-image: url('images/babygirl.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.twob {
+    background-image: url('images/manJungle.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.threeb {
+    background-image: url('images/hawaii.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.fourb {
+    background-image: url('images/handsup.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* div for banner pic */
+.bannerpic {
+    height: 350px;
+}
+/* Description of the slide. Div tag under the pictures */
+.bannerDescription {
+    position: absolute;
+    font-family: 'Raleway', sans-serif;
+}
+/* contact banners for profiles */
+.contactCard {
+    width: 200px;
+    height: 300px;
+    box-shadow: 0 4px 8px 2px lightgray;
+    margin: 20px 20px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+.cardpic {
+    height: 150px;
+}
+.cardone {
+    background-image: url('images/ppic.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.gallarydiv {
+    width: auto;
+    height: 500px;
+    background-image: url('images/babygirl.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.profilebody {
+    width: 1000px;
+    margin: auto;
+}
+.profilecontent {
+    width: 600px;
+    float: left;
+    padding: 0 0 0 0;
+}
+.pro_pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.bookingdiv {
+    border: 2px solid #320037;
+    width: 350px;
+    height: 400px;
+    float: right;
+    margin-top: 100px;
+    border-radius: 5px;
+    padding: 12px 12px;
+    
+}
+.bookingInput {
+    width: 300px;
+    border: 0;
+    border-bottom: 1px solid #320037;
+    outline: none;
+    padding: 12px 20px;
+}
+.bookingm {
+    width: 300px;
+    height: 150px;
+    outline: none;
+    background-color: #F6F6F6;
+    border: none;
+}
+.bookingbutton {
+    width: 300px;
+    background-color: #320037;
+    color: white;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+}
+
+.console_body {
+    width: 1000px;
+    margin: auto;
+}
+.accountprofile {
+    width: 200px;
+    padding: 20px 15px;
+    float: left;
+}
+.accsettings {
+    border: 0;
+    border-bottom: 1px solid #320037;
+    outline: none;
+    background-color: white;
+}
+.accsettings:hover{
+    color: white;
+    background-color: #320037;
+}
+.console {
+    width: 800px;
+    display: inline-block;
+    padding: 20px 20px;
+
+}
+.console_banner {
+    width: 700px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 lightgray;
+    display: inline-block;
+    position: relative;
+}
+h3 {
+    border: none;
+    border-bottom: 1px solid #320037;
+    width: 50%;
+}

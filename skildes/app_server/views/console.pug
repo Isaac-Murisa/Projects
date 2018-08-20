@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='google-signin-client_id', content='YOUR_CLIENT_ID.apps.googleusercontent.com')
+    title Console
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='shortcut icon', href='/images/newlogo1.png')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js')
+    script(src='https://maxcdn.bootstrapcdn.Logo Design Studio Pro com/bootstrap/4.1.0/js/bootstrap.min.js')
+  body
+    .console_body
+      .accountprofile
+        h3 Profile
+        br
+        .pro_pic.console_pro_pic
+        br
+        p
+          | Isaac Murisa 
+          br
+          |                     St. John's 
+          br
+          |                     icm506**** 
+          br
+          |                     709**** 
+          br
+        input.accsettings(type='button', value='Edit')
+        // <input type="button" value="Account Settings" class="accsettings">
+      .console
+        h3 Console
+        br
+        .skillpro
+          .console_banner
+            .bannerpic.twob
+            .caption.bannerDescription Meeeeeee
+        h3 Chats
+        .chats
+          | No chats or messages to view
+          .chat(data-toggle='modal', data-target='#chat_modal')
+            | meeee
+          #chat_modal.modal.fade(role='dialog')
+            .modal-dialog
+              .modal-content
+                .incomingSms
+                  | incoming
+                .outgoingSms
+                  | outgoing
+        h3 Requests
+        .request
+          | No requests to view
