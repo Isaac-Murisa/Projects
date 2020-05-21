@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+        <div class=page>
+            <form action="{{ url_for('security') }}" method=post>
+                Enter User name:</br>
+                <input type=text name=usr size=20>
+                <input type=submit name=sendUsr value=Enter>
+            </form>
+        </div>
+{% endblock %}

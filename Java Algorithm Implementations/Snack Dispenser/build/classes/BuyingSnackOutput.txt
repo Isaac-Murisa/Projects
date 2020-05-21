@@ -1,0 +1,30 @@
+run:
+1: Product: Doritos.    Price: 2.0
+2: Product: Ruffles.    Price: 2.0
+3: Product: HumtyDummty.    Price: 1.0
+4: Product: Chocolates.    Price: 0.5
+
+What do you want to do? Enter the letter: 
+A: Buy a product 
+B: Add a product 
+C:  Empty Coins  
+Q: Quit
+
+a
+Insert Coin by typing the coin number: 
+1:  Two dollar coin 
+2:  One dollar coin 
+3:  50 cent coin 
+4:  25 cent coin  
+5:  10 cent coin 
+6:  5 cent coin 
+7:  1 cent coin 
+8:  Quit
+
+1
+
+Enter the number corresponding to the product you want: 
+3
+You can get your snack: HumtyDummty
+And your change: $1.0
+BUILD SUCCESSFUL (total time: 19 seconds)
