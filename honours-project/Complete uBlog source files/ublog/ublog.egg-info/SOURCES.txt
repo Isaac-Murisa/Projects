@@ -1,0 +1,12 @@
+MANIFEST.in
+ublog/__init__.py
+ublog/ublog.py
+ublog.egg-info/PKG-INFO
+ublog.egg-info/SOURCES.txt
+ublog.egg-info/dependency_links.txt
+ublog.egg-info/requires.txt
+ublog.egg-info/top_level.txt
+ublog/static/style.css
+ublog/templates/layout.html
+ublog/templates/login.html
+ublog/templates/show_entries.html

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+        <dt>Title:
+        <dd><input type=text size=30 name=title>
+        <dt>Text:
+        <dd><textarea name=text rows=5 cols=40></textarea>
+		<dt>Intent:
+		<dd><input type=radio value=newPost name=intent checked>New Post
+		<dd><input type=radio value=newThread name=intent>New Thread
+		<dd><input type=radio value=updatePost name=intent>Update Post
+        <dd><input type=submit value=Share>
+      </dl>
+    </form>
+  {% endif %}
+  <ul class=entries>
+  {% if post_list != None %}
+    {% for entry in post_list %}
+      <li><h2>{{ entry[2] }}</h2>{{ entry[3] }}
+    {% else %}
+      <li><em>Unbelievable.  No entries here so far</em>
+    {% endfor %}
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endif %}
+  </ul>
+{% endblock %}

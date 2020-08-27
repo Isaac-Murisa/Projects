@@ -1,0 +1,3 @@
+graft ublog/templates
+graft ublog/static
+include ublog/schema.sql

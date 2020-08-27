@@ -1,0 +1,1 @@
+from .ublog import app
